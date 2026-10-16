@@ -7,23 +7,26 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-red-600 selection:text-white">
 
     <!-- Header / Navbar -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <!-- Yahan ap apna logo image ka link ya file name de sakte hain -->
-                <span class="text-2xl font-black tracking-wider text-red-600">GROVIX</span>
-                <span class="text-xs text-gray-500 font-semibold uppercase tracking-widest hidden sm:inline">Your Growth Engine</span>
+            <div class="flex items-center space-x-3">
+                <div class="bg-gradient-to-tr from-red-600 to-rose-500 text-white p-2 rounded-xl shadow-md shadow-red-500/20 font-black text-xl tracking-wider">GX</div>
+                <div>
+                    <span class="text-2xl font-black tracking-wider text-slate-900 block leading-none">GROVIX</span>
+                    <span class="text-[10px] text-red-600 font-bold uppercase tracking-widest block mt-1">Your Growth Engine</span>
+                </div>
             </div>
-            <nav class="hidden md:flex space-x-8 font-medium">
+            <nav class="hidden md:flex space-x-8 font-medium text-slate-600">
                 <a href="#home" class="hover:text-red-600 transition">Home</a>
                 <a href="#about" class="hover:text-red-600 transition">About</a>
                 <a href="#services" class="hover:text-red-600 transition">Services</a>
+                <a href="#brands" class="hover:text-red-600 transition">Brands & Partners</a>
                 <a href="#contact" class="hover:text-red-600 transition">Contact</a>
             </nav>
-            <a href="https://wa.me/923036968024" target="_blank" class="bg-green-600 text-white px-5 py-2 rounded-full font-medium hover:bg-green-700 transition flex items-center space-x-2">
+            <a href="https://wa.me/923036968024" target="_blank" class="bg-emerald-600 text-white px-5 py-2.5 rounded-xl font-medium hover:bg-emerald-700 transition shadow-lg shadow-emerald-600/20 flex items-center space-x-2">
                 <i class="fa-brands fa-whatsapp text-lg"></i>
                 <span>WhatsApp Us</span>
             </a>
@@ -31,161 +34,316 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-gradient-to-r from-gray-900 to-red-950 text-white py-24">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <span class="bg-red-600/30 text-red-400 text-sm font-semibold px-4 py-1.5 rounded-full border border-red-500/30">YOUR GROWTH ENGINE</span>
-            <h1 class="text-4xl md:text-6xl font-extrabold mt-6 mb-6 tracking-tight">Accelerate Your Business Growth with <span class="text-red-500">Grovix</span></h1>
-            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">We provide high-impact digital marketing services, digital strategy, SEO, social media management, and performance analytics to scale your brand.</p>
-            <div class="flex justify-center space-x-4">
-                <a href="https://wa.me/923036968024" target="_blank" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 transition shadow-lg flex items-center space-x-2">
+    <section id="home" class="relative bg-slate-950 text-white py-28 overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-red-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-rose-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+            <span class="inline-flex items-center space-x-2 bg-red-500/10 text-red-400 text-xs font-bold px-4 py-2 rounded-full border border-red-500/20 uppercase tracking-widest mb-6">
+                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                <span>Your Growth Engine</span>
+            </span>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-tight">
+                Accelerate Your Business Growth <br>with <span class="bg-gradient-to-r from-red-500 to-rose-400 bg-clip-text text-transparent">Grovix</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                We provide high-impact digital marketing services, digital strategy, SEO, social media management, and performance analytics to scale your brand globally.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://wa.me/923036968024" target="_blank" class="w-full sm:w-auto bg-emerald-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-emerald-700 transition shadow-xl shadow-emerald-600/30 flex items-center justify-center space-x-3">
                     <i class="fa-brands fa-whatsapp text-xl"></i>
                     <span>Chat on WhatsApp</span>
                 </a>
-                <a href="#services" class="bg-white/10 border border-white/20 text-white px-8 py-3 rounded-full font-bold hover:bg-white/20 transition">Our Services</a>
+                <a href="#services" class="w-full sm:w-auto bg-white/10 hover:bg-white/15 border border-white/10 text-white px-8 py-4 rounded-xl font-bold transition backdrop-blur-sm">
+                    Explore Services
+                </a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+    <section id="about" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <h2 class="text-3xl font-bold mb-6 text-gray-900">About Grovix</h2>
-                <p class="text-gray-600 mb-4 leading-relaxed">Grovix is a premier digital marketing agency dedicated to scaling brands globally. We help businesses build a powerful online presence through data-driven strategies, cutting-edge web design, and result-oriented marketing campaigns.</p>
-                <p class="text-gray-600 mb-6 leading-relaxed">Owned by Muhammad Amjad Khan, Grovix operates with international standards, serving clients across Pakistan, the UK, and the KSA.</p>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-600">
-                        <h4 class="font-bold text-gray-900">Global Reach</h4>
-                        <p class="text-sm text-gray-500">PK, UK & KSA Presence</p>
+                <span class="text-red-600 font-bold text-xs uppercase tracking-widest bg-red-50 px-3 py-1.5 rounded-md">Who We Are</span>
+                <h2 class="text-3xl md:text-4xl font-black mt-3 mb-6 text-slate-900 tracking-tight">Driving Digital Excellence for Modern Brands</h2>
+                <p class="text-slate-600 mb-4 leading-relaxed">
+                    Grovix is a premier digital marketing agency dedicated to scaling brands globally. We help businesses build a powerful online presence through data-driven strategies, cutting-edge web design, and result-oriented marketing campaigns.
+                </p>
+                <p class="text-slate-600 mb-8 leading-relaxed">
+                    Operating with international standards, Grovix serves clients across Pakistan, the UK, and the KSA with customized digital solutions.
+                </p>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="text-red-600 text-xl font-bold mb-1"><i class="fa-solid fa-earth-europe"></i></div>
+                        <h4 class="font-bold text-slate-900">Global Reach</h4>
+                        <p class="text-xs text-slate-500 mt-1">PK, UK & KSA Presence</p>
                     </div>
-                    <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-600">
-                        <h4 class="font-bold text-gray-900">Expert Team</h4>
-                        <p class="text-sm text-gray-500">Strategy & Analytics</p>
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="text-red-600 text-xl font-bold mb-1"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h4 class="font-bold text-slate-900">Data-Driven</h4>
+                        <p class="text-xs text-slate-500 mt-1">Strategy & Analytics</p>
                     </div>
                 </div>
             </div>
-            <div class="bg-gray-100 p-8 rounded-2xl border border-gray-200">
-                <h3 class="text-xl font-bold mb-4 text-gray-900">Quick Details</h3>
-                <ul class="space-y-3 text-gray-700">
-                    <li><strong class="text-gray-900">Company Name:</strong> Grovix</li>
-                    <li><strong class="text-gray-900">Owner:</strong> Muhammad Amjad Khan</li>
-                    <li><strong class="text-gray-900">Trademark Class:</strong> Class 35 (Online Marketing Services)</li>
-                    <li><strong class="text-gray-900">Address:</strong> House No 17-B, Street No 4, Mateen Avenue, College Road, Butt Chowk, Lahore</li>
+            
+            <div class="bg-gradient-to-br from-slate-900 to-slate-950 p-8 md:p-10 rounded-3xl shadow-2xl text-white relative overflow-hidden border border-slate-800">
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-red-600/20 rounded-full blur-2xl"></div>
+                <h3 class="text-2xl font-black mb-6 flex items-center space-x-3">
+                    <i class="fa-solid fa-circle-info text-red-500"></i>
+                    <span>Agency Overview</span>
+                </h3>
+                <ul class="space-y-4 text-slate-300 text-sm">
+                    <li class="flex justify-between border-b border-slate-800 pb-3">
+                        <span class="text-slate-400">Company Name:</span>
+                        <span class="font-bold text-white">Grovix</span>
+                    </li>
+                    <li class="flex justify-between border-b border-slate-800 pb-3">
+                        <span class="text-slate-400">Core Industry:</span>
+                        <span class="font-bold text-white">Digital Marketing Agency</span>
+                    </li>
+                    <li class="flex justify-between border-b border-slate-800 pb-3">
+                        <span class="text-slate-400">Specialization:</span>
+                        <span class="font-bold text-white">Class 35 (Online Marketing)</span>
+                    </li>
+                    <li class="flex justify-between pt-1">
+                        <span class="text-slate-400">Head Office:</span>
+                        <span class="font-bold text-white text-right">Mateen Avenue, Lahore</span>
+                    </li>
                 </ul>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-gray-50">
+    <section id="services" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Professional Services</h2>
-                <p class="text-gray-600 mt-2">Comprehensive digital solutions engineered for your success</p>
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-red-600 font-bold text-xs uppercase tracking-widest bg-red-100/60 px-3 py-1.5 rounded-md">What We Do</span>
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 mt-3 tracking-tight">Our Professional Services</h2>
+                <p class="text-slate-600 mt-2">Comprehensive digital solutions engineered for your business success</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center text-xl mb-6 font-bold"><i class="fa-solid fa-chart-line"></i></div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">Digital Strategy & SEO</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Comprehensive digital strategy development and Search Engine Optimization (SEO) to maximize your organic reach.</p>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
+                    <div class="w-14 h-14 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-red-600 group-hover:text-white transition-all shadow-sm">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Digital Strategy & SEO</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Comprehensive digital strategy development and Search Engine Optimization (SEO) to maximize your organic reach.</p>
                 </div>
                 <!-- Service 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center text-xl mb-6 font-bold"><i class="fa-solid fa-share-nodes"></i></div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">Social Media Management</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Engaging social media management and high-performing paid advertising campaigns across multiple platforms.</p>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
+                    <div class="w-14 h-14 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-red-600 group-hover:text-white transition-all shadow-sm">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Social Media Management</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Engaging social media management and high-performing paid advertising campaigns across multiple platforms.</p>
                 </div>
                 <!-- Service 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center text-xl mb-6 font-bold"><i class="fa-solid fa-laptop-code"></i></div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">Website & Landing Pages</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Professional website and landing page development optimized for high conversions and seamless user experience.</p>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
+                    <div class="w-14 h-14 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-red-600 group-hover:text-white transition-all shadow-sm">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Website & Landing Pages</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Professional website and landing page development optimized for high conversions and seamless user experience.</p>
                 </div>
                 <!-- Service 4 -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center text-xl mb-6 font-bold"><i class="fa-solid fa-pen-nib"></i></div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">Content Creation</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Compelling content creation tailored to resonate with your target audience and strengthen brand identity.</p>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
+                    <div class="w-14 h-14 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-red-600 group-hover:text-white transition-all shadow-sm">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Content Creation</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Compelling content creation tailored to resonate with your target audience and strengthen brand identity.</p>
                 </div>
                 <!-- Service 5 -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center text-xl mb-6 font-bold"><i class="fa-solid fa-envelope-open-text"></i></div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">Email Marketing</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Targeted email marketing campaigns designed to nurture leads, retain customers, and drive recurring sales.</p>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
+                    <div class="w-14 h-14 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-red-600 group-hover:text-white transition-all shadow-sm">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Email Marketing</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Targeted email marketing campaigns designed to nurture leads, retain customers, and drive recurring sales.</p>
                 </div>
                 <!-- Service 6 -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center text-xl mb-6 font-bold"><i class="fa-solid fa-chart-pie"></i></div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">Performance Analytics</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">In-depth performance analytics and tracking to measure ROI and continuously optimize marketing campaigns.</p>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
+                    <div class="w-14 h-14 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-red-600 group-hover:text-white transition-all shadow-sm">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Performance Analytics</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">In-depth performance analytics and tracking to measure ROI and continuously optimize marketing campaigns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands & Partners Section -->
+    <section id="brands" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-red-600 font-bold text-xs uppercase tracking-widest bg-red-50 px-3 py-1.5 rounded-md">Portfolio & Clients</span>
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 mt-3 tracking-tight">Our Valued Brands & Partners</h2>
+                <p class="text-slate-600 mt-2">Proudly collaborating with leading e-commerce brands, educational institutions, and agencies</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Brand 1 -->
+                <a href="https://ecrustore.com/" target="_blank" class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:shadow-lg transition flex items-center justify-between group">
+                    <div>
+                        <span class="text-xs text-red-600 font-bold uppercase tracking-wider block mb-1">Clothing Brand</span>
+                        <h4 class="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">Ecru Premium</h4>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-red-600 transition"></i>
+                </a>
+                <!-- Brand 2 -->
+                <a href="https://pyrokids.com/" target="_blank" class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:shadow-lg transition flex items-center justify-between group">
+                    <div>
+                        <span class="text-xs text-red-600 font-bold uppercase tracking-wider block mb-1">Kids Clothing</span>
+                        <h4 class="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">Pyro Kids</h4>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-red-600 transition"></i>
+                </a>
+                <!-- Brand 3 -->
+                <a href="https://www.hamme.com.pk/" target="_blank" class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:shadow-lg transition flex items-center justify-between group">
+                    <div>
+                        <span class="text-xs text-red-600 font-bold uppercase tracking-wider block mb-1">Cosmetic Brand</span>
+                        <h4 class="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">Hamme Naturals</h4>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-red-600 transition"></i>
+                </a>
+                <!-- Brand 4 -->
+                <a href="https://www.momsminimart.com/" target="_blank" class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:shadow-lg transition flex items-center justify-between group">
+                    <div>
+                        <span class="text-xs text-red-600 font-bold uppercase tracking-wider block mb-1">Clothing Brand</span>
+                        <h4 class="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">Moms & Mini Mart</h4>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-red-600 transition"></i>
+                </a>
+                <!-- Brand 5 -->
+                <a href="https://royalboutique.com.pk/" target="_blank" class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:shadow-lg transition flex items-center justify-between group">
+                    <div>
+                        <span class="text-xs text-red-600 font-bold uppercase tracking-wider block mb-1">Clothing Brand</span>
+                        <h4 class="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">Royal Boutique</h4>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-red-600 transition"></i>
+                </a>
+                <!-- Brand 6 -->
+                <a href="https://tajmeelibyhaniya.com/" target="_blank" class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:shadow-lg transition flex items-center justify-between group">
+                    <div>
+                        <span class="text-xs text-red-600 font-bold uppercase tracking-wider block mb-1">Cosmetic Brand</span>
+                        <h4 class="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">Tajmeeli By Hania</h4>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-red-600 transition"></i>
+                </a>
+                <!-- Brand 7 -->
+                <a href="https://thehealthyfuel.com/" target="_blank" class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:shadow-lg transition flex items-center justify-between group">
+                    <div>
+                        <span class="text-xs text-red-600 font-bold uppercase tracking-wider block mb-1">Vitamins Brand</span>
+                        <h4 class="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">The Healthy Fuel</h4>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-red-600 transition"></i>
+                </a>
+                <!-- Brand 8 -->
+                <a href="https://novatuitionhub.online/" target="_blank" class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:shadow-lg transition flex items-center justify-between group">
+                    <div>
+                        <span class="text-xs text-red-600 font-bold uppercase tracking-wider block mb-1">Education Company</span>
+                        <h4 class="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">Nova Tuition Hub</h4>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-red-600 transition"></i>
+                </a>
+                <!-- Brand 9 -->
+                <a href="https://tutorspoint.co.uk/" target="_blank" class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:shadow-lg transition flex items-center justify-between group">
+                    <div>
+                        <span class="text-xs text-red-600 font-bold uppercase tracking-wider block mb-1">Educational Company</span>
+                        <h4 class="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">Tutors Point UK</h4>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-red-600 transition"></i>
+                </a>
+                <!-- Brand 10 -->
+                <a href="https://www.crownheights.pk/" target="_blank" class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:shadow-lg transition flex items-center justify-between group">
+                    <div>
+                        <span class="text-xs text-red-600 font-bold uppercase tracking-wider block mb-1">Real Estate</span>
+                        <h4 class="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">Crown Heights</h4>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-red-600 transition"></i>
+                </a>
+                <!-- Additional Travel/Consultants -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs text-red-600 font-bold uppercase tracking-wider block mb-1">Travel & Tourism</span>
+                        <h4 class="text-lg font-bold text-slate-900">Umrah & Travel Agencies</h4>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">Al Dawah, Crown Umrah, Kaaba Connections & Safar e Kaaba</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact & WhatsApp Section -->
-    <section id="contact" class="py-20 bg-white">
+    <section id="contact" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Get In Touch</h2>
-                <p class="text-gray-600 mt-2">Connect with our offices across regions or message us on WhatsApp instantly</p>
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-red-600 font-bold text-xs uppercase tracking-widest bg-red-100/60 px-3 py-1.5 rounded-md">Get In Touch</span>
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 mt-3 tracking-tight">Connect With Our Offices</h2>
+                <p class="text-slate-600 mt-2">Reach out across regions or connect with us instantly on WhatsApp</p>
             </div>
-            <div class="grid md:grid-cols-4 gap-6 text-center">
+            <div class="grid md:grid-cols-4 gap-6">
                 <!-- PK -->
-                <div class="p-6 bg-gray-50 rounded-xl border border-gray-200 flex flex-col justify-between">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 flex flex-col justify-between hover:border-red-500 transition shadow-sm">
                     <div>
-                        <div class="text-red-600 text-2xl mb-3"><i class="fa-solid fa-phone"></i></div>
-                        <h4 class="font-bold text-gray-900 mb-1">Pakistan</h4>
-                        <p class="text-sm text-gray-600 mb-4">+92 303 6968024<br>+92 301 4093198</p>
+                        <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold"><i class="fa-solid fa-phone"></i></div>
+                        <h4 class="font-bold text-slate-900 mb-1 text-lg">Pakistan</h4>
+                        <p class="text-sm text-slate-600 mb-6">+92 303 6968024<br>+92 301 4093198</p>
                     </div>
-                    <a href="https://wa.me/923036968024" target="_blank" class="bg-green-600 text-white py-2 px-4 rounded-lg text-sm font-semibold hover:bg-green-700 transition flex items-center justify-center space-x-2">
+                    <a href="https://wa.me/923036968024" target="_blank" class="bg-emerald-600 text-white py-3 px-4 rounded-xl text-sm font-semibold hover:bg-emerald-700 transition flex items-center justify-center space-x-2 shadow-md shadow-emerald-600/20">
                         <i class="fa-brands fa-whatsapp"></i>
                         <span>WhatsApp</span>
                     </a>
                 </div>
                 <!-- UK -->
-                <div class="p-6 bg-gray-50 rounded-xl border border-gray-200 flex flex-col justify-between">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 flex flex-col justify-between hover:border-red-500 transition shadow-sm">
                     <div>
-                        <div class="text-red-600 text-2xl mb-3"><i class="fa-solid fa-globe"></i></div>
-                        <h4 class="font-bold text-gray-900 mb-1">United Kingdom</h4>
-                        <p class="text-sm text-gray-600 mb-4">+44 7521 835811<br>+44 7763 257265</p>
+                        <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold"><i class="fa-solid fa-globe"></i></div>
+                        <h4 class="font-bold text-slate-900 mb-1 text-lg">United Kingdom</h4>
+                        <p class="text-sm text-slate-600 mb-6">+44 7521 835811<br>+44 7763 257265</p>
                     </div>
-                    <a href="https://wa.me/447521835811" target="_blank" class="bg-green-600 text-white py-2 px-4 rounded-lg text-sm font-semibold hover:bg-green-700 transition flex items-center justify-center space-x-2">
+                    <a href="https://wa.me/447521835811" target="_blank" class="bg-emerald-600 text-white py-3 px-4 rounded-xl text-sm font-semibold hover:bg-emerald-700 transition flex items-center justify-center space-x-2 shadow-md shadow-emerald-600/20">
                         <i class="fa-brands fa-whatsapp"></i>
                         <span>WhatsApp</span>
                     </a>
                 </div>
                 <!-- KSA -->
-                <div class="p-6 bg-gray-50 rounded-xl border border-gray-200 flex flex-col justify-between">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 flex flex-col justify-between hover:border-red-500 transition shadow-sm">
                     <div>
-                        <div class="text-red-600 text-2xl mb-3"><i class="fa-solid fa-earth-americas"></i></div>
-                        <h4 class="font-bold text-gray-900 mb-1">Saudi Arabia</h4>
-                        <p class="text-sm text-gray-600 mb-4">+966 59 679 3655<br>+966 55 343 5752</p>
+                        <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold"><i class="fa-solid fa-earth-americas"></i></div>
+                        <h4 class="font-bold text-slate-900 mb-1 text-lg">Saudi Arabia</h4>
+                        <p class="text-sm text-slate-600 mb-6">+966 59 679 3655<br>+966 55 343 5752</p>
                     </div>
-                    <a href="https://wa.me/966596793655" target="_blank" class="bg-green-600 text-white py-2 px-4 rounded-lg text-sm font-semibold hover:bg-green-700 transition flex items-center justify-center space-x-2">
+                    <a href="https://wa.me/966596793655" target="_blank" class="bg-emerald-600 text-white py-3 px-4 rounded-xl text-sm font-semibold hover:bg-emerald-700 transition flex items-center justify-center space-x-2 shadow-md shadow-emerald-600/20">
                         <i class="fa-brands fa-whatsapp"></i>
                         <span>WhatsApp</span>
                     </a>
                 </div>
                 <!-- Location -->
-                <div class="p-6 bg-gray-50 rounded-xl border border-gray-200 flex flex-col justify-between">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 flex flex-col justify-between shadow-sm">
                     <div>
-                        <div class="text-red-600 text-2xl mb-3"><i class="fa-solid fa-location-dot"></i></div>
-                        <h4 class="font-bold text-gray-900 mb-1">Head Office</h4>
-                        <p class="text-sm text-gray-600 mb-4">Mateen Avenue, College Road, Butt Chowk, Lahore</p>
+                        <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold"><i class="fa-solid fa-location-dot"></i></div>
+                        <h4 class="font-bold text-slate-900 mb-1 text-lg">Head Office</h4>
+                        <p class="text-sm text-slate-600 mb-6">Mateen Avenue, College Road, Butt Chowk, Lahore</p>
                     </div>
-                    <span class="text-xs text-gray-400 py-2">Lahore, Pakistan</span>
+                    <span class="text-xs text-slate-400 text-center py-3 bg-slate-50 rounded-xl border border-slate-100 font-medium">Pakistan Operations</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-            <p>&copy; 2026 Grovix. All rights reserved.</p>
-            <p>Website: www.grovix.us</p>
+    <footer class="bg-slate-950 text-white py-10 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm text-slate-400 gap-4">
+            <div class="flex items-center space-x-2">
+                <span class="text-red-500 font-black text-lg">GROVIX</span>
+                <span>&copy; 2026. All rights reserved.</span>
+            </div>
+            <p>Official Website: <span class="text-white font-medium">www.grovix.us</span></p>
         </div>
     </footer>
 
